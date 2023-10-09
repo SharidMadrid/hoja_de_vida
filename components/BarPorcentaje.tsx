@@ -1,5 +1,5 @@
 import React from 'react';
-import '@/styles/asideIzq.module.css'; // Importa tus estilos Tailwind CSS
+
 
 interface BarProps {
     clave: string;
