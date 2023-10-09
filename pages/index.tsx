@@ -18,7 +18,9 @@ import {Portafolio} from '@/components/Portafolio';
 
 const Hojadevida: React.FC = () => {
   return (
-    <div className="grid grid-cols-[20%,70%,10%] gap-0 w-full font-sans bg-gray-10">
+    
+    <div className="grid grid-cols-[20%,50%,10%] gap-0 w-full font-sans bg-gray-10">
+
             <section className="col-start-1 col-span-2">
                 <div className='flex flex-wrap gap-10 my-4'>
                     <div className="w-full bg-white border border-solid border-gray-300 mb-0 p-4 rounded-lg shadow-md">
@@ -77,10 +79,7 @@ const Hojadevida: React.FC = () => {
                                     <Descripcion valor='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.'/>
                             </div>
                             <div className="botonContratar">
-                                <a href="https://www.youtube.com/" className="enlace"></a>
-                                <div className="textoBoton">HIRE ME ➔</div>
-                                <VentanaModal />
-                                
+                            <VentanaModal nombre='HIRE ME' valor='Lorem ipsum dolor sit amet' />                               
                             </div>
                             </div>
                             <img src="https://via.placeholder.com/326x459" alt="Rayan's Picture" id="imagen" />

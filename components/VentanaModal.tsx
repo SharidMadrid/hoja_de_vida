@@ -1,43 +1,43 @@
 import React, { useState } from 'react';
+import { Descripcion } from './Descripcion';
 
-export default function VentanaModal() {
+interface VentanaModalProps {
+  nombre: string;
+  valor: string;
+}
+
+export default function VentanaModal({ nombre, valor }: VentanaModalProps) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
 
   return (
     <>
       <button
-        className='bg-cyan-500 py-2 px-6 text-white font-bold m-5'
-        onClick={() => setIsOpen(true)}
+        className="bg-yellow-500 text-gray-900 py-2 px-6 font-inter rounded-lg font-medium text-base break-words"
+        onClick={openModal}
       >
-        CLICK
+        {nombre} ➔
       </button>
       {isOpen && (
         <div className='fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items'>
           <div className='bg-white p-5 rounded flex flex-col justify-center'>
             <div>
-              <label htmlFor='' className='mr-3 font-semibold font-[poppins]'>
-                Nombre
-              </label>
-              <input
-                type='text'
-                className='w-64 px-4 border-2 border-gray-300 rounded-lg focus:outline-none'
-              />
+              <Descripcion valor={valor} />
             </div>
-            <div>
-              <label htmlFor='' className='mr-3 font-semibold font-[poppins]'>
-                Apellido
-              </label>
-              <input
-                type='text'
-                className='w-64 px-4 border-2 border-gray-300 rounded-lg focus:outline-none'
-              />
-            </div>
+
             <div>
               <button
                 className='bg-red-500 py-2 px-6 text-white font-bold m-5'
-                onClick={() => setIsOpen(false)}
+                onClick={closeModal}
               >
-                Close modal
+                X
               </button>
             </div>
           </div>
