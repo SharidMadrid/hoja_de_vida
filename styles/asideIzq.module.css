@@ -1,0 +1,25 @@
+
+/*
+/* Estilos para el contenido 
+.box-content {
+    @apply flex justify-between items-center mb-10;
+}
+
+.language,
+.skill {
+    @apply text-base font-normal text-gray-600;
+}
+
+.percentage {
+    @apply text-base font-normal text-gray-600 w-1/3 text-right;
+}
+
+/* Estilos para la barra de progreso 
+.progress-container {
+    @apply w-40 h-4 bg-gray-300 rounded overflow-hidden flex items-center;
+}
+
+.progress-bar {
+    @apply h-full bg-yellow-500 rounded;
+}
+*/

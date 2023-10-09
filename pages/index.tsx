@@ -1,118 +1,197 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import 'tailwindcss/tailwind.css';
 
-const inter = Inter({ subsets: ['latin'] })
+import React from 'react';
+import { AiFillYoutube } from 'react-icons/ai';
+import { FaCoffee, FaHome} from 'react-icons/fa';
+import { BarPorcentaje } from '@/components/BarPorcentaje';
+import { IconosLink } from '@/components/IconosLink';
+import { Separador } from '@/components/Separador';
+import { InfoPersonal } from '@/components/InfPersonal';
+import { Skill } from '@/components/Skill';
+import { Descripcion } from '@/components/Descripcion';
+import { Educacion } from '@/components/Educacion';
+import {Portafolio} from '@/components/Portafolio';
 
-export default function Home() {
+const Hojadevida: React.FC = () => {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="grid grid-cols-[20%,70%,10%] gap-0 w-full font-sans bg-gray-100">
+            <aside className="col-start-1 col-span-2">
+                <div className='flex flex-wrap gap-10'>
+                    <div className="w-full bg-white border border-solid border-gray-300 mb-0 p-4 rounded-lg shadow-md">
+                        <div className="relative inline-block">
+                            <img className="w-36 h-36 rounded-full" src="https://via.placeholder.com/150x150" alt="Profile Picture" />
+                            <div className="w-4 h-4 bg-green-500 rounded-full absolute bottom-0 right-0"></div>
+                        </div>
+                        <div className="text-2xl font-semibold text-gray-700">Rayan Adlardard</div>
+                        <div className="text-base font-normal text-gray-600">Front-end Developer</div>
+                    </div>
+                </div>
+                <div className="w-full bg-white border border-solid border-gray-300 mb-0 p-4 rounded-lg shadow-md">
+                    <div>
+                        <InfoPersonal clave='Edad:' valor='23'/>
+                        <InfoPersonal clave='Telefono:' valor='3012218887'/>
+                        <div className="box-content">
+                            <div className="box-title">Freelance:</div>
+                            <div className="box-value available">Available</div>
+                        </div>
+                    </div>
+                </div>    
+                <div className="w-full bg-white border border-solid border-gray-300 mb-0 p-4 rounded-lg shadow-md">
+                    <div className="box-title">Languages</div>
+                    <div>
+                        <BarPorcentaje clave='Ingles' valor={100} porcentaje={100} />
+                    </div>
+                    <BarPorcentaje clave='Ingles' valor={50} porcentaje={50} />
+                </div>
+
+                <div className="w-full bg-white border border-solid border-gray-300 mb-0 p-4 rounded-lg shadow-md">
+                    <div className="box-title">Programming Languages</div>
+                    <div>
+                        <BarPorcentaje clave='Html' valor={90} porcentaje={90} />
+                    </div>
+
+                    <BarPorcentaje clave='Ingles' valor={50} porcentaje={50} />
+                    
+                </div>
+                <div className="w-full bg-white border border-solid border-gray-300 mb-20 p-4 rounded-lg shadow-md">
+                    <div className="box-title">Extra Skills</div>
+                    <Skill icon={FaHome}  valor='Bootstrap, Materialize' />
+                    <Skill icon={FaHome}  valor='Bootstrap, Materialize' />
+                </div>
+            </aside>
+            <main className="col-start-3 col-span-8">
+                <div id="centro">
+                        <div id="contenedor">
+                        <div id="presentacion">
+                            <div className="contenido">
+                            <div className="texto">
+                                <div className="contenedor_titulo">
+                                <div className="nombre">I’m Rayan Adlrdard</div>
+                                <span className="titulo">Front-end </span>
+                                <span className="nombre">Developer</span>
+                                </div>
+                                    <Descripcion valor='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.'/>
+                            </div>
+                            <div className="botonContratar">
+                                <a href="https://www.youtube.com/" className="enlace"></a>
+                                <div className="textoBoton">HIRE ME ➔</div>
+                            </div>
+                            </div>
+                            <img src="https://via.placeholder.com/326x459" alt="Rayan's Picture" id="imagen" />
+                        </div>
+                        </div>
+                    </div>
+                    <div className="centrar">
+                        <div className="contenedor_titulo">
+                        <div><h3>My Knowledge</h3></div>
+                        </div>
+                        <div className="contenedor-texto">
+                        <Descripcion valor="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus"/>
+                        </div>
+                    </div>
+
+                    <div id="conocimientos">
+                        <div className="grid-container">
+                        <Portafolio 
+                            icon={FaCoffee}
+                            titulo='web development' 
+                            valor='blog, e-commerce'
+                            type='con' /> 
+                         <Portafolio 
+                            icon={FaCoffee}
+                            titulo='web development' 
+                            valor='blog, e-commerce'
+                            type='con' /> 
+                            <Portafolio 
+                            icon={FaCoffee}
+                            titulo='web development' 
+                            valor='blog, e-commerce'
+                            type='con' /> 
+                            <Portafolio 
+                            icon={FaCoffee}
+                            titulo='web development' 
+                            valor='blog, e-commerce'
+                            type='con' /> 
+                            <Portafolio 
+                            icon={FaCoffee}
+                            titulo='web development' 
+                            valor='blog, e-commerce'
+                            type='con' /> 
+                            <Portafolio 
+                            icon={FaCoffee}
+                            titulo='web development' 
+                            valor='blog, e-commerce'
+                            type='con' /> 
+                    </div>
+                    <div className="centrar">
+                        <div className="contenedor_titulo">
+                        <div><h3>Education</h3></div>
+                        </div>
+                        <div className="contenedor-texto">
+                        <Descripcion valor="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus"/>
+                        </div>
+                    </div>
+                    <div className=" p-20 flex-1 flex flex-col justify-center items-center text-center">
+                        <div className="w-full h-1/2 bg-white p-0 m-0  items-center">
+                            <Educacion centroEducativo=' University of Toronto' rolEducativo='Student' fechaEducativa='Jan 2016 - Dec 2021' titulo='Certificado' valor="Lorem ipsum dolor sit amet, consectetur"/>
+                            <Separador/>
+                            <Educacion centroEducativo=' University of Toronto' rolEducativo='Student' fechaEducativa='Jan 2016 - Dec 2021' titulo='Certificado' valor="Lorem ipsum dolor sit amet, consectetur"/>
+                            <Separador/>
+                            <Educacion centroEducativo=' University of Toronto' rolEducativo='Student' fechaEducativa='Jan 2016 - Dec 2021' titulo='Certificado' valor="Lorem ipsum dolor sit amet, consectetur"/>
+
+                        </div>
+                        
+                        
+                    </div>
+                    <div className="centrar">
+                        <div className="contenedor_titulo">
+                        <div><h3>Portafolio</h3></div>
+                        </div>
+                        <div className="contenedor-texto">
+                        <Descripcion valor='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,Natoque rutrum semper sed suspendisse nunc lectus.'/>
+                        </div>
+                    </div>
+                    
+                    <div id="conocimientos">
+                        <div className="grid-container">
+                            <Portafolio 
+                            link='https://media-cdn.tripadvisor.com/media/photo-s/0c/bb/a3/97/predator-ride-in-the.jpg' 
+                            descripcionImagen="Descripción de la imagen" 
+                            titulo='How to make web templates' 
+                            url='https://www.youtube.com/' 
+                            valor='blog, e-commerce'
+                            type='port' /> 
+                            
+                            <Portafolio 
+                            link='https://media-cdn.tripadvisor.com/media/photo-s/0c/bb/a3/97/predator-ride-in-the.jpg' 
+                            descripcionImagen="Descripción de la imagen" 
+                            titulo='How to make web templates' 
+                            url='https://www.youtube.com/' 
+                            valor='blog, e-commerce'
+                            type='port' /> 
+                    
+                            <Portafolio 
+                            link='https://media-cdn.tripadvisor.com/media/photo-s/0c/bb/a3/97/predator-ride-in-the.jpg' 
+                            descripcionImagen="Descripción de la imagen" 
+                            titulo='How to make web templates' 
+                            url='https://www.youtube.com/' 
+                            valor='blog, e-commerce'
+                            type='port' /> 
+                        </div>
+                    </div>
+                </div>
+                    
+            </main>
+        <div>
+                <div className="w-full h-full pt-73 pb-131 bg-white flex flex-col justify-start items-center gap-19 inline-flex">
+                    <div className="text-2b2b2b text-lg font-inter justify-center font-semibold capitalize leading-22.25 break-words">Links</div>
+                    <IconosLink icon={AiFillYoutube} url='https://www.youtube.com/' />
+                    <IconosLink icon={FaHome} url='https://www.youtube.com/' />
+                    <IconosLink icon={FaCoffee} url='https://www.youtube.com/' />
+                </div>
+            </div>
         </div>
-      </div>
+  );
+};
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+export default Hojadevida;

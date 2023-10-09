@@ -1,27 +1,383 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+/*Estilo global*/
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  display: grid;
+  grid-template-columns: 20% 75% 5%;
+  grid-gap: 0px; /* Espacio entre las secciones */
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+
+}
+
+/*--------------------------------*/
+
+/*menu izquierdo*/
+
+
+/* Estilos generales */
+.container {
+  width: auto;
+  height: auto;
+  background: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border: 1.5px #F0F0F6 solid;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+
+/* Estilos para los títulos */
+.box-title {
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #2B2B2B;
+  margin-bottom: 10px;
+}
+
+/* Estilos para el contenido */
+.box-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.skill {
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: #767676;
+}
+
+.available {
+  color: #7EB942;
+}
+
+
+/* Estilos para la imagen de perfil */
+
+.profile-name {
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #2B2B2B;
+}
+
+.profile-role {
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: #767676;
+}
+/* Estilos para el contenedor principal */
+.profile-container {
+  position: relative; /* Agregamos posición relativa al contenedor */
+  display: inline-block; /* Cambiamos a display inline-block para ajustar el ancho al contenido */
+}
+
+/* Estilos para la imagen de perfil */
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 9999px;
+}
+
+/* Estilos para el estado en línea */
+.online-status {
+  width: 16px;
+  height: 16px;
+  background: #7EB942;
+  border-radius: 9999px;
+  position: absolute; /* Agregamos posición absoluta al elemento */
+  bottom: 0; /* Lo posicionamos en la parte inferior */
+  right: 0; /* Lo posicionamos en la parte derecha */
+  left: 130px;
+  top: 110px;
+}
+
+
+.dorado {
+  color: #FFB400; /* Cambia el color a tu elección */
+}
+
+/*------------Cetro-------------*/
+/* Estilos generales */
+
+#centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+#contenedor {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column; 
+  overflow: hidden;
+  width: auto;
+}
+
+
+/* Estilos de la sección de presentación */
+#presentacion {
+  width: 50%;
+  height: 50%;
+  background: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: row; /* Mostrar el contenido en fila */
+  align-items: center; /* Alinear verticalmente */
+}
+
+.contenido {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.texto {
+  justify-content: space-between;
+  align-items: center;/* Espacio entre el texto y la imagen */
+}
+
+.nombre {
+  color: #2B2B2B;
+  font-size: 45px;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 50px;
+  word-wrap: break-word;
+  gap: 10px;
+}
+.contenedor_titulo{
+
+  align-items: center;
+  width: 500px;
+  height: 118px;
+  gap: 10px;
+  
+}
+.contenedor-texto{
+  display: flex;
+  align-items: center;
+  width: 424px;
+  height: 88px;
+  gap: 10px;
+  
+}
+.titulo {
+  color: #FFB400;
+  font-size: 45px;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 50px;
+  word-wrap: break-word
+}
+
+.descripcion {
+  color: #767676;
+  font-size: 16px;
+  font-family: 'Inter';
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 24px;
+  word-wrap: break-word;
+  text-align: justify;
+}
+
+#imagen {
+  width: 50%;
+  height: 50%;
+}
+
+
+.botonContratar {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.textoBoton {
+  background-color: #FFB400;
+  color: #2B2B2B;
+  padding: 10px 30px;
+  font-family: 'Inter';
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+.icono {
+  position: relative;/* Agregamos posición absoluta al elemento */
+  bottom: 0; /* Lo posicionamos en la parte inferior */
+  right: 0; /* Lo posicionamos en la parte derecha */
+  left: -30px;
+  top: 0px;
+}
+
+
+
+/* Estilos de la sección de conocimientos */
+#conocimientos {
+  background-color: #f0f0f0;
+  padding: 50px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Alinea el texto al centro */
+}
+
+h3 {
+  color: #2B2B2B;
+  font-size: 32px;
+  font-family: 'Inter';
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 39.55px;
+  word-wrap: break-word;
+}
+
+.contenedor-texto {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px; /* Agrega un espacio entre el título y el texto */
+  
+}
+
+.conocimiento {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin: 10px;
+  width: auto;
+  height: auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  grid-template-rows: repeat(2, auto); /* 2 filas */
+  gap: 5px;
+  margin: 10px;
+}
+
+.tituloConocimiento {
+  font-size: 18px;
+  font-weight: bold;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center; /* Centra horizontalmente */
+  margin-bottom: 10px; /* Espacio adicional abajo del título */
+  
+}
+
+.descripcionConocimiento {
+  font-size: 14px;
+  color: #666;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center; /* Centra horizontalmente */
+  margin-bottom: 10px; /* Espacio adicional abajo del título */
+  
+}
+.tamaño{
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center; /* Centra horizontalmente */
+  margin-bottom: 10px; /* Espacio adicional abajo del título */
+  margin-top: 10px;
+  font-size: 68px;
+}
+
+.centro-educativo{
+  margin-bottom: 10px;
+  gap: 20px;
+  color: #2B2B2B;
+  font-size: 18px;
+  font-family: Inter;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 22.25px;
+  word-wrap: break-word;
+  
+}
+.centrar{
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; /* Alinea el texto al centro */
+}
+.rol-educativo{
+  margin-bottom: 10px;
+  gap: 10px;
+  color: #2B2B2B;
+  font-size: 15px;
+  font-family: Inter;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 24px;
+  word-wrap: break-word;
+}   
+.fecha-educativa{
+  gap: 10px;
+  color: white;
+  font-size: 10px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 10.09px;
+  word-wrap: break-word;
+  width: 100%; 
+  height: 100%; 
+  background: #FFB400; 
+  border-radius: 1px;
+}
+.presentacion {
+  width: 100%;
+  height: 50%;
+  background: white;
+  padding: 20px;
+  display: flex;
+  flex-direction:row; /* Mostrar el contenido en fila */
+  align-items: center; /* Alinear verticalmente */
+}
+.tamaño-img{
+  width: 90px;
+  height: 90px;
 }
