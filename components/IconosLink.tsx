@@ -12,7 +12,7 @@ const IconosLink = ({ icon: Icon, url }: IconsProps) => {
       <div className=" w-12 h-12 relative">
         <div className=" w-7 h-7 absolute top-0 left-0 bg-yellow-400 rounded-full">
           <a href={url}>
-            <span className="symbols-outlined text-black hover:text-purple-600 visited:text-black">
+            <span className="symbols-outlined text-black hover:text-purple-600 visited:text-black text-xl">
               <Icon /> {/* Usa el icono dinámico */}
             </span>
           </a>

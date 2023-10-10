@@ -98,10 +98,7 @@ const Hojadevida: React.FC = () => {
                             <span className="titulo">Ingenieria</span>
                             <span className="nombre">de Sistemas</span>
                             </div>
-
-                            <div className="descripcion">
-                            Soy estudiante de Ingeniería de Sistemas y actualmente me encuentro en el séptimo semestre. Poseo habilidades en desarrollo de software utilizando React, Django, MySQL, HTML, CSS.
-                            </div>
+                            <Descripcion valor='Soy estudiante de Ingeniería de Sistemas y actualmente me encuentro en el séptimo semestre. Poseo habilidades en desarrollo de software utilizando React, Django, MySQL, HTML, CSS.'/>
                             <div className="botonContratar">
                             <VentanaModal nombre="HIRE ME" titulo="Como dato curioso:" valor="Disfruto más la parte administrativa de mi carrera, todo lo relacionado con la gestión de proyectos y el diseño UI/UX." />
                             </div>
