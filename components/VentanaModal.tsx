@@ -4,9 +4,10 @@ import { Descripcion } from './Descripcion';
 interface VentanaModalProps {
   nombre: string;
   valor: string;
+  titulo: string;
 }
 
-export default function VentanaModal({ nombre, valor }: VentanaModalProps) {
+export default function VentanaModal({ nombre, valor, titulo }: VentanaModalProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
@@ -35,6 +36,7 @@ export default function VentanaModal({ nombre, valor }: VentanaModalProps) {
                 X
               </button>
             <div>
+              <h3>{titulo}</h3>
               <Descripcion valor={valor} />
             </div>
 

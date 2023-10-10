@@ -89,32 +89,28 @@ const Hojadevida: React.FC = () => {
             </section>
             <section className="col-start-3 col-span-3">
                 <div id="centro">
-                        <div id="contenedor">
-                        <div id="presentacion">
-                            <div className="contenido">
-                            <div className="texto">
-                                <div className="contenedor_titulo ">
-                                <div className="nombre">Sharid Madrid </div>
-                                <span className="titulo">Ingenieria </span>
-                                <span className="nombre"> de Sistemas</span>
-                                </div >
-                        
-                                    <Descripcion valor='Soy estudiante de Ingeniería de Sistemas y 
-                                                        actualmente me encuentro en el séptimo 
-                                                        semestre. Poseo habilidades en desarrollo de 
-                                                        software utilizando React, Django, 
-                                                        MySQL, HTML, CSS.'/>
+                <div id="contenedor">
+                    <div id="presentacion">
+                        <div className="contenido">
+                        <div className="texto">
+                            <div className="contenedor_titulo">
+                            <div className="nombre">Sharid Madrid</div>
+                            <span className="titulo">Ingenieria</span>
+                            <span className="nombre">de Sistemas</span>
+                            </div>
+
+                            <div className="descripcion">
+                            Soy estudiante de Ingeniería de Sistemas y actualmente me encuentro en el séptimo semestre. Poseo habilidades en desarrollo de software utilizando React, Django, MySQL, HTML, CSS.
                             </div>
                             <div className="botonContratar">
-                            <VentanaModal nombre='HIRE ME' valor='He incluyendo ventas y atención al cliente, lo que 
-                                                        me ha permitido desarrollar habilidades de 
-                                                        comunicación, organización y gestión de 
-                                                        archivos' />                               
+                            <VentanaModal nombre="HIRE ME" titulo="Como dato curioso:" valor="Disfruto más la parte administrativa de mi carrera, todo lo relacionado con la gestión de proyectos y el diseño UI/UX." />
                             </div>
-                            </div>
-                            <img src='/Sharid_Madrid.jpeg' alt="Sharid Madrid" id="imagen" />
                         </div>
                         </div>
+                        <img src="/Sharid_Madrid.jpeg" alt="Sharid Madrid" id="imagen" />
+                    </div>
+                    </div>
+
                     </div>
                     <div className="centrar">
                         <div className="contenedor_titulo">
