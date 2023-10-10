@@ -180,6 +180,8 @@ body {
 .contenedor_titulo{
 
   align-items: center;
+  font-weight: 700;
+  font-size: 35px;
   width: 500px;
   height: 118px;
   gap: 10px;

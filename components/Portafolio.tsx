@@ -18,7 +18,7 @@ const Portafolio = ({ type = 'port', titulo, valor, link, url, descripcionImagen
         <div className="flex flex-col  items-center gap-2 m-0">
           <div>
             <img className="mb-5 mt-5 h-210 w-300" src={url} alt={descripcionImagen} />
-            <div className="text-3xl  font-bold text-center mb-10 mt-10 h-50 w-50 text-yellow-400">
+            <div className="text-5xl font-bold text-center mb-5 mt-5 h-16 w-16 text-yellow-400">
               {Icon && <Icon />}
             </div>
           </div>

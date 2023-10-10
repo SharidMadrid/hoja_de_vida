@@ -26,19 +26,20 @@ export default function VentanaModal({ nombre, valor }: VentanaModalProps) {
         {nombre} ➔
       </button>
       {isOpen && (
-        <div className='fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items'>
-          <div className='bg-white p-5 rounded flex flex-col justify-center'>
-            <div>
-              <Descripcion valor={valor} />
-            </div>
-
-            <div>
-              <button
+        <div className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-md flex justify-center items-center">
+          <div className='bg-white w-80 p-6 rounded-lg shadow-lg'>
+            <button
                 className='bg-red-500 py-2 px-6 text-white font-bold m-5'
                 onClick={closeModal}
               >
                 X
               </button>
+            <div>
+              <Descripcion valor={valor} />
+            </div>
+
+            <div>
+              
             </div>
           </div>
         </div>

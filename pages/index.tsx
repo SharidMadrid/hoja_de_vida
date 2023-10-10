@@ -1,8 +1,6 @@
 import 'tailwindcss/tailwind.css';
 
 import React from 'react';
-import { AiFillYoutube } from 'react-icons/ai';
-
 import { FaCoffee, FaHome } from 'react-icons/fa';
 import { BsPeopleFill } from 'react-icons/bs';
 import {AiOutlineCalendar } from 'react-icons/ai';
@@ -10,6 +8,16 @@ import { MdSyncProblem } from 'react-icons/md';
 import { RiBearSmileLine } from 'react-icons/ri';
 import { SlOrganization } from 'react-icons/sl';
 import { TbBrandSuperhuman } from 'react-icons/tb';
+import { MdDeveloperMode } from 'react-icons/md';
+import { DiScrum } from 'react-icons/di';
+import { PiUserFocus } from 'react-icons/pi';
+import { BsGraphUpArrow } from 'react-icons/bs';
+import { GiCoffeeBeans } from 'react-icons/gi';
+import { MdOutlineLiquor } from 'react-icons/md';
+import { BsFacebook } from 'react-icons/bs';
+import { AiFillInstagram, AiFillTwitterCircle, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
+
+
 
 import { BarPorcentaje } from '@/components/BarPorcentaje';
 import { IconosLink } from '@/components/IconosLink';
@@ -110,55 +118,53 @@ const Hojadevida: React.FC = () => {
                     </div>
                     <div className="centrar">
                         <div className="contenedor_titulo">
-                        <div><h3>My Knowledge</h3></div>
+                        <div><h3>Mi Conocimiento</h3></div>
                         </div>
                         <div className="contenedor-texto">
-                        <Descripcion valor="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus"/>
+                        <Descripcion valor="El conocimiento es el ala con la que volamos hacia lo infinito. - Leonardo da Vinci"/>
                         </div>
                     </div>
 
                     <div id="conocimientos">
                         <div className="grid-container">
                         <Portafolio 
-                            icon={FaCoffee}
-                            titulo='web development' 
-                            valor='blog, e-commerce'
+                            icon={MdDeveloperMode}
+                            titulo='Desarrollo de software' 
+                            valor='diseño y desarrollo de aplicaciones web '
                             type='con' /> 
                          <Portafolio 
-                            icon={FaCoffee}
-                            titulo='web development' 
-                            valor='blog, e-commerce'
+                            icon={DiScrum}
+                            titulo='Metodologías ágiles' 
+                            valor=' capacidad para trabajar de manera eficiente en equipos y adaptarte a los cambios en los requisitos del proyecto.'
                             type='con' /> 
                             <Portafolio 
-                            icon={FaCoffee}
-                            titulo='web development' 
-                            valor='blog, e-commerce'
+                            icon={PiUserFocus}
+                            titulo='Atención al cliente' 
+                            valor='Capacidad para brindar un servicio amable, eficiente y personalizado.'
                             type='con' /> 
                             <Portafolio 
-                            icon={FaCoffee}
-                            titulo='web development' 
-                            valor='blog, e-commerce'
+                            icon={BsGraphUpArrow}
+                            titulo='Facturación y contabilidad' 
+                            valor='Gestion de registros financieros, realizar transacciones comerciales, adémasde mantener un control riguroso de los registros contables'
                             type='con' /> 
                             <Portafolio 
-                            icon={FaCoffee}
-                            titulo='web development' 
-                            valor='blog, e-commerce'
+                            icon={GiCoffeeBeans}
+                            titulo='Barista' 
+                            valor='preparar bebidas a base de café y brindar una experiencia especializada en café a los clientes.'
                             type='con' /> 
                             <Portafolio 
-                            icon={FaCoffee}
-                            titulo='web development' 
-                            valor='blog, e-commerce'
+                            icon={MdOutlineLiquor}
+                            titulo='Barman' 
+                            valor='Realizar mezclas de diferentes tipos de licores e ingredientes para la creacion de cócteles '
                             type='con' /> 
+                            
                     </div>
                     <div className="centrar">
                         <div className="contenedor_titulo">
                         <div><h3>Educación</h3></div>
                         </div>
                         <div className="contenedor-texto">
-                        <Descripcion valor="Durante mis años de formacion, he estado inmersa en un constante proceso de aprendizaje y crecimiento. 
-                        Mis habilidades se han desarrollado en áreas que abarcan desde el diseño y desarrollo de software
-                         hasta la gestión de sistemas complejos. Mi formación en este programa me ha proporcionado una base 
-                         sólida para abordar desafíos tecnológicos y resolver problemas de manera efectiva."/>
+                        <Descripcion valor="La educación es el arma más poderosa que puedes usar para cambiar el mundo. - Nelson Mandela"/>
                         </div>
                         
                     </div>
@@ -204,10 +210,10 @@ const Hojadevida: React.FC = () => {
                     </div>
                     <div className="centrar">
                         <div className="contenedor_titulo">
-                        <div><h3>Portafolio</h3></div>
+                        <div><h3>Experiencia Laboral</h3></div>
                         </div>
                         <div className="contenedor-texto">
-                        <Descripcion valor='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,Natoque rutrum semper sed suspendisse nunc lectus.'/>
+                        <Descripcion valor='El secreto del exito es comenzar. - Mark Twain'/>
                         </div>
                     </div>
                     <div id="conocimientos">
@@ -217,24 +223,25 @@ const Hojadevida: React.FC = () => {
                         descripcionImagen="Tomada de GitHub" 
                         titulo='Tour Of Heroes' 
                         url='/angular2-tour-of-heroes.jpeg' 
-                        valor='La aplicación presenta una lista de superhéroes y permite a los usuarios ver detalles de cada superhéroe y realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar)'
+                        valor='CRUD (Crear, Leer, Actualizar, Eliminar)'
+                        type='port' /> 
+                        
+
+                        <Portafolio 
+                        link='https://github.com/ICard-App/icard-front.git' 
+                        descripcionImagen="Tomada de GitHub" 
+                        titulo='Icard-Front' 
+                        url='/icard.jpeg' 
+                        valor='Aplicación para la gestión los pedidos de un restaurante '
                         type='port' /> 
 
-                    <Portafolio 
-                        link="https://media-cdn.tripadvisor.com/media/photo-s/0c/bb/a3/97/predator-ride-in-the.jpg"  
-                        descripcionImagen="Descripción de la imagen" 
-                        titulo='How to make web templates' 
-                        url='https://www.youtube.com/' 
-                        valor='blog, e-commerce'
-                        type='port' />
-
-                    <Portafolio 
-                        link='https://media-cdn.tripadvisor.com/media/photo-s/0c/bb/a3/97/predator-ride-in-the.jpg' 
-                        descripcionImagen="Descripción de la imagen" 
-                        titulo='How to make web templates' 
-                        url='https://www.youtube.com/' 
-                        valor='blog, e-commerce'
-                        type='port' />
+                        <Portafolio 
+                        link='https://github.com/ICard-App/icard-back.git' 
+                        descripcionImagen="Tomada de GitHub" 
+                        titulo='Icard-Back' 
+                        url='/icard.jpeg' 
+                        valor='Aplicación para la gestión los pedidos de un restaurante '
+                        type='port' /> 
 
                         </div>
                     </div>    
@@ -244,9 +251,11 @@ const Hojadevida: React.FC = () => {
         <section className="col-start-6 col-span-1">
                 <div className="w-full h-full pt-73 pb-131 bg-white flex flex-col justify-start items-center gap-19 inline-flex">
                     <div className="text-2b2b2b text-lg font-inter justify-center font-semibold capitalize leading-22.25 break-words">Links</div>
+                    <IconosLink icon={BsFacebook} url='https://www.facebook.com/' />
+                    <IconosLink icon={AiFillInstagram} url='https://www.instagram.com/' />
+                    <IconosLink icon={AiFillTwitterCircle} url='https://twitter.com/' />
+                    <IconosLink icon={AiFillLinkedin} url='https://www.linkedin.com/in/samantha-madrid-ab0178253/' />
                     <IconosLink icon={AiFillYoutube} url='https://www.youtube.com/' />
-                    <IconosLink icon={FaHome} url='https://www.youtube.com/' />
-                    <IconosLink icon={FaCoffee} url='https://www.youtube.com/' />
                 </div>
         </section>
         </div>
